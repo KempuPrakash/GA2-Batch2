@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-40D7XT28MY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-40D7XT28MY');
+</script>
+
+  <meta charset="UTF-8">
+  <title>Cricket Selection Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 500px;
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #ffcc00;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #e0e0e0;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: none;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #ccc;
+    }
+
+    select {
+      appearance: none;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background: #ffcc00;
+      color: #333;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #e6b800;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>🏏 Cricket Team Selection</h2>
+    <form action="submit_selection.php" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" required min="10" max="40">
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">--Select--</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label for="role">Playing Role</label>
+      <select id="role" name="role" required>
+        <option value="">--Select--</option>
+        <option>Batsman</option>
+        <option>Bowler</option>
+        <option>All-Rounder</option>
+        <option>Wicket Keeper</option>
+      </select>
+
+      <label for="batting_style">Batting Style</label>
+      <select id="batting_style" name="batting_style">
+        <option value="">--Select--</option>
+        <option>Right-hand Bat</option>
+        <option>Left-hand Bat</option>
+      </select>
+
+      <label for="bowling_style">Bowling Style</label>
+      <select id="bowling_style" name="bowling_style">
+        <option value="">--Select--</option>
+        <option>Right-arm Fast</option>
+        <option>Left-arm Fast</option>
+        <option>Right-arm Spin</option>
+        <option>Left-arm Spin</option>
+      </select>
+
+      <label for="experience">Experience (years)</label>
+      <input type="number" id="experience" name="experience" min="0" max="30">
+
+      <label for="achievements">Achievements</label>
+      <textarea id="achievements" name="achievements" rows="3" placeholder="List major performances or tournaments..."></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+</body>
+</html>
