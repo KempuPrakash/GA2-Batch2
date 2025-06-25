@@ -69,6 +69,24 @@
       appearance: none;
     }
 
+      .pay-button {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  padding: 12px;
+  background: #ffcc00;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+.pay-button:hover {
+  background: #e6b800;
+}
+
+
     button {
       margin-top: 25px;
       width: 100%;
@@ -148,7 +166,7 @@
       <label for="achievements">Achievements</label>
       <textarea id="achievements" name="achievements" rows="3" placeholder="List major performances or tournaments..."></textarea>
 
-      <button type="submit">Pay Now</button>
+      <a href="thankyou.html" class="pay-button">Pay Now</a>
     </form>
   </div>
 
